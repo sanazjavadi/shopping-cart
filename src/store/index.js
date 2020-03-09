@@ -39,7 +39,7 @@ mutations:{
 },
 actions:{
     fetchProducts({commit}){
-        Axios.get('https://jsonplaceholder.typicode.com/posts')
+        Axios.get('https://my-json-server.typicode.com/AnifaMd/shopping-cart/products')
         .then(res =>{
             console.log(res.data)
             commit('SET_PRODUCTS', res.data)
@@ -49,7 +49,7 @@ actions:{
         })
     },
     getProduct({commit},productId){
-        Axios.get(`https://jsonplaceholder.typicode.com/posts/${productId}`)
+        Axios.get(`https://my-json-server.typicode.com/AnifaMd/shopping-cart/products/${productId}`)
         .then(res =>{
             commit('SET_PRODUCT',res.data)
         })
@@ -71,7 +71,7 @@ getters:{
     totalCartPrice(state){
         let total = 0;
         state.cart.forEach(item =>{
-            total =item.product.id * item.number
+            total =item.product.price * item.number
         })
         return total
     },

@@ -30,8 +30,8 @@ methods:{
 										</div>
 									</div>
 									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$<span>{{product.id}}</span></div>
+										<div class="rating_r rating_r_4 home_item_rating">{{product.color}}</div>
+										<div class="product_price text-right">$<span>{{product.price}}</span></div>
 									</div>
 								</div>
 								<div class="product_buttons">

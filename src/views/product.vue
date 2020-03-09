@@ -11,7 +11,7 @@ export default {
   methods:{
  ...mapActions(['addProductToCart','getProduct']),
     addToCart(){
-       addProductToCart({
+       this.addProductToCart({
               product :this.product,
             number:1
         })
@@ -23,15 +23,15 @@ export default {
 <template>
 <section class="product">
     <div class="container">
-    <div class="row">
+    <div class="row no-gutters">
         <div class="col-lg-4">
         <img class=" img-fluid" src="../assets/flower.jpg">
           
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-4 product-content">
             <h3>{{product.title}}</h3>
-            <h1 class="text-center">{{product.id}} $</h1>
-            <a href="#" class="button" @click="addToCart()">add to cart</a>
+            <h1 class="text-left mb-5">{{product.price}} $</h1>
+            <a href="#" class="button" @click="addToCart">add to cart</a>
         </div>
     </div>
     </div>
@@ -44,7 +44,14 @@ export default {
 .product{
     margin:20% auto;
     display: flex;
-    
+    justify-content: space-between;
+    padding:20px;
+
+}
+.product-content{
+    border:1px solid gray;
+    border-left: none;
+     padding:20px;
 }
 .button{
   padding:15px 20px;

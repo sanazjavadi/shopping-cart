@@ -17,7 +17,7 @@ export default {
 }
 </script>
 <template>
-<div class="d-flex justify-content-between  flex-wrap img-fluid mt-5">
+<div class="d-flex justify-content-around  flex-wrap img-fluid mt-5">
    <productCArt v-for="product in products" :key="product.id"  :product="product" class="mb-4 "/>
 </div>
  

@@ -3,7 +3,6 @@ import router from 'vue-router'
 import home from './views/home.vue'
 import products from './views/productList.vue'
 import product from './views/product.vue'
-import cart from './views/yourCart.vue'
 Vue.use(router)
 
 
@@ -25,10 +24,7 @@ const routes = new router({
             name:"product",
             props:true
           },
-          {
-            path:'/cart',
-            component:cart
-          }
+        
     ],
     
 })

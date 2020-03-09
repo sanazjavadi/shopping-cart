@@ -24,13 +24,12 @@ export default {
 
   <div class="dd-menu" >
     
-    <div v-for="item in cart" :key="item.id" class="p-2">
+    <div v-for="item in cart" :key="item.id" class="p-3">
         <p>  {{item.product.title}} </p>
       <strong>     {{item.product.id}}</strong> x
          {{item.number}}
-   <button class="btn btn-primary" @click.prevent="removeProductFromCart(item.product)">
-           remove
-   </button>
+         <button href="#" class="remove mb-3" @click.prevent="removeProductFromCart(item.product)">X</button>
+ 
 
          </div>
  <div class="divider"></div>
@@ -45,7 +44,20 @@ export default {
 <style scoped>
 
 /* Dropdown */
+.remove{
+  width: 30px;
+  height: 30px;
+padding:5px;
+background: #b12156;
+border-radius:100%;
+text-decoration: none;
+font-weight: 900;
+color:white;
+outline: none;
+border:none;
+float:right;
 
+}
 .dropdown {
   display: inline-block;
   position: relative;
