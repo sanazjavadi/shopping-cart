@@ -7,8 +7,10 @@ export default {
     },
     methods:{
         
-      ...mapActions(['removeProductFromCart'])
-     
+      ...mapActions(['removeProductFromCart','clearCArtItems']),
+     clearcArtItems(){
+this.clearCArtItems()
+     }
     }
 }
 </script>
@@ -34,7 +36,9 @@ export default {
          </div>
  <div class="divider"></div>
     <div>
-      <h3>{{totalCartPrice}}  total price</h3>
+      <h5>{{totalCartPrice}}  total price</h5>
+      
+      <a class="p-3" @click="clearcArtItems()">clear all</a>
     </div>
   </div>
   

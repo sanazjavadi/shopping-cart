@@ -34,6 +34,9 @@ mutations:{
             return item.product.id !== product.id
         })
     },
+ CLEAR_CART_ITEMS (state) {
+        state.cart = [];
+    }
  
     
 },
@@ -63,6 +66,9 @@ actions:{
     removeProductFromCart({commit}, product){
      commit('REMOVE_PRODUCT_FROM_CART', product)
     },  
+    clearCArtItems({commit}){
+        commit('CLEAR_CART_ITEMS')
+    }
 },
 getters:{
     productCartCount(state){
